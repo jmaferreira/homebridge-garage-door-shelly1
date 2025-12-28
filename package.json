@@ -4,19 +4,26 @@
     "description": "Homebridge plugin for a simple garage door opener using Shelly 1 relay",
     "main": "index.js",
     "engines": {
-        "homebridge": ">=0.4.50",
-        "node": ">=12.13.0"
+        "homebridge": ">=0.4.50 || ^2.0.0-beta.0",
+        "node": "^18.20.4 || ^20.15.1 || ^22"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "mocha \"test/**/*.test.js\""
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jmaferreira/homebridge-garage-door-shelly1"
     },
     "dependencies": {
-        "jsonpath": "^1.0.2",
+        "jsonpath": "^1.1.1",
         "request": "^2.88.2"
+    },
+    "devDependencies": {
+        "chai": "^6.2.2",
+        "chai-as-promised": "^8.0.2",
+        "homebridge": "^2.0.0-beta.0",
+        "mocha": "^11.7.5",
+        "sinon": "^21.0.1"
     },
     "keywords": [
         "homebridge-plugin",

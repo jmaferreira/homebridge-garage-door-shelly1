@@ -1,0 +1,43 @@
+{
+  "bridge": {
+    "name": "Homebridge",
+    "username": "AE:72:E7:5D:1D:82",
+    "port": 51826,
+    "pin": "111-222-333"
+  },
+  "accessories": [
+    {
+      "name": "Garagentor",
+      "http_method": "GET",
+      "openURL": "http://shelly-garagedoor-open.home/relay/0?turn=on",
+      "closeURL": "http://shelly-garagedoor-close.home/relay/0?turn=on",
+      "openTime": 16,
+      "closeTime": 14,
+      "autoLock": false,
+      "autoLockDelay": 20,
+      "polling": true,
+      "pollInterval": 15,
+      "statusURL": "http://api.home/shellydw2/1/status/get",
+      "statusKey": "$.state",
+      "statusValueOpen": "open",
+      "statusValueClosed": "close",
+      "statusValueOpening": "2",
+      "statusValueClosing": "3",
+      "manufacturer": "Shelly",
+      "model": "Shelly Garage Model",
+      "debug": true,
+      "accessory": "GarageDoorOpener"
+    }
+  ],
+  "platforms": [
+    {
+      "name": "Config",
+      "port": 8581,
+      "auth": "form",
+      "theme": "orange",
+      "tempUnits": "c",
+      "lang": "auto",
+      "platform": "config"
+    }
+  ]
+}
