@@ -116,3 +116,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Homebridge test files
+test/homebridge/*
+!test/homebridge/config.json
